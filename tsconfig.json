@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "es6",
+    "skipLibCheck": true,
+    "noStrictGenericChecks": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "es2015",
+    "jsx": "react",
+    "removeComments": false
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

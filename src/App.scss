@@ -1,0 +1,19 @@
+@import "Theme";
+
+
+body {
+  padding: 0;
+  margin: 0;
+  .app {
+    width: $width;
+    height: $height;
+    max-height: $height;
+    overflow: hidden;
+    //background-color: $primary;
+    color: lighten($default, 10);
+    background-image: linear-gradient(to right bottom, #090c25, #111a3b, #1a2552, #24316a, #303d83);
+  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: $font-size;
+}
+

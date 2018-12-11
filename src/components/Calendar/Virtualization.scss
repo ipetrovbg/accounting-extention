@@ -1,0 +1,12 @@
+@import "Calendar";
+
+.virtualization {
+  width: $calendarWidth;
+  height: 227px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

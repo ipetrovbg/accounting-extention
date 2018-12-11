@@ -1,0 +1,66 @@
+$primary: #303d83;
+$default: #d8d8d8;
+
+$width: 400px;
+$height: 603px;
+$border-radius: 5px;
+$font-size: 20px;
+$padding: 20px;
+
+input {
+  &[type="text"], &[type="email"], &[type="number"], &[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: $border-radius;
+  }
+}
+
+
+.flex {
+  display: flex;
+  &.direction-column {
+    flex-direction: column;
+  }
+  &.direction-row {
+    flex-direction: row;
+  }
+  &.space-around {
+    justify-content: space-around;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.content-center {
+    justify-content: center;
+  }
+}
+.padding {
+  padding: $padding;
+}
+
+.wrapper {
+  width: $width;
+  height: $height;
+  overflow-y: auto;
+  &.padding {
+    padding: $padding;
+    width: $width - ($padding * 2);
+    height: $height - ($padding * 2);
+  }
+}
+.pointer {
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

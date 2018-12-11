@@ -1,0 +1,142 @@
+@import "../../Theme";
+
+$calendarCell: 2.9285714286em;
+$calendarWidth: 288px;
+$calendarHeight: 304px;
+
+.datapicker {
+
+  @extend .noselect;
+
+  position: relative;
+  width: $calendarWidth;
+  height: $calendarHeight;
+  overflow: hidden;
+
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    content: " ";
+    height: 0;
+    line-height: 0;
+    z-index: 1;
+    width: 150%;
+    left: -25%;
+    box-shadow: 0 0 .7em .7em #303d83;
+  }
+
+  ul {
+    position: absolute;
+    height: 295px;
+    top: 0;
+    z-index: 100;
+    padding: 0px 0 10px 0px;
+    margin: 0;
+    overflow: hidden;
+    li {
+      list-style: none;
+      padding: 10px 0 10px 10px;
+      margin: 0;
+      font-size: 0.4rem;
+      text-transform: uppercase;
+      color: lighten($primary, 30)
+    }
+  }
+
+  .container {
+    width: $calendarWidth;
+    height: 227px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  table {
+
+    font-size: 12px;
+    background-color: $primary;
+    color: lighten($default, 20);
+    padding: $padding;
+    margin: 0;
+    border-width: 0;
+    border-color: inherit;
+    border-spacing: 0;
+    border-collapse: separate;
+    table-layout: fixed;
+    outline: 0;
+    position: relative;
+    z-index: 1;
+    &.header {
+      width: 100%;
+    }
+
+    &.no-top-padding {
+      padding-top: 0;
+    }
+    &.no-bottom-padding {
+      padding-bottom: 0;
+    }
+    tbody {
+      width: 257px;
+      height: 247px;
+      overflow:hidden;
+      display:block;
+    }
+    td, th {
+      border-width: 0;
+      padding: 0;
+      text-align: center;
+      border-style: solid;
+      font-weight: normal;
+      cursor: default;
+      width: $calendarCell;
+      height: $calendarCell;
+      border-radius: 2px;
+      border-color: transparent;
+      &:focus {
+        outline: none;
+      }
+      span {
+        border-radius: 2px;
+        padding: .5em .5em;
+        box-sizing: border-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        outline: 0;
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        overflow: hidden;
+        width: $calendarCell;
+        height: $calendarCell;
+      }
+      &.hdays {
+        font-size: .5rem;
+        color: lighten($primary, 30);
+        padding: 0.9em 1em;
+        text-transform: uppercase;
+      }
+      &.date {
+        color: lighten($primary, 30);
+
+        &.initial-selected {
+          color: lighten($default, 80);
+        }
+        &.selected {
+          background-color: $default;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
